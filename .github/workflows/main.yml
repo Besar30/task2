@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: "login to docker"
-        run: docker login --username ${{secrets.USER}} --password ${{secrets.DOCKER_TOKEN}}"
+        run: docker login --username ${{secrets.USER}} --password ${{secrets.PASS}}"
       - name: "build image"
         run: docker build -t  ${{ secrets.USER}}/imagetask .
       - name: "push image to dockerhub"
